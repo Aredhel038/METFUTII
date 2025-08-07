@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_da63aa9fe0f21b8e6acc0fbc8c82be9d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_da63aa9fe0f21b8e6acc0fbc8c82be9d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_da63aa9fe0f21b8e6acc0fbc8c82be9d = L.map(
+                "map_da63aa9fe0f21b8e6acc0fbc8c82be9d",
+                {
+                    center: [46.5, 11.4],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_54dbdf109ddab06fd66a54212cdadd58 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_54dbdf109ddab06fd66a54212cdadd58.addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var tile_layer_fc8ac1a104b6b513275c92e9cec1c7bd = L.tileLayer(
+                "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri Boundaries",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fc8ac1a104b6b513275c92e9cec1c7bd.addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var marker_a014649979f8f91c0bbe448a1b905b25 = L.marker(
+                [46.4981, 11.3548],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_9b5ff8527c1f7766310d50ed8dcb7c67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27fd7291dfa2ece1b102ee1b25b2c540 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_782a1fa200e2b438b2026d31862169ff = $(`<div id="html_782a1fa200e2b438b2026d31862169ff" style="width: 100.0%; height: 100.0%;"><b>Bozen</b><br>Akkumulierte Regenmenge: 6.9 mm</div>`)[0];
+                popup_27fd7291dfa2ece1b102ee1b25b2c540.setContent(html_782a1fa200e2b438b2026d31862169ff);
+            
+        
+
+        marker_a014649979f8f91c0bbe448a1b905b25.bindPopup(popup_27fd7291dfa2ece1b102ee1b25b2c540)
+        ;
+
+        
+    
+    
+                marker_a014649979f8f91c0bbe448a1b905b25.setIcon(icon_9b5ff8527c1f7766310d50ed8dcb7c67);
+            
+    
+            var marker_a55780e443fadfd0de15b1420f0ef302 = L.marker(
+                [46.7796, 11.41446],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_8450b9becffa1112c44b1a2902f4f7e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12d0263a77ae3cfa041e5c4f093f6da3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b4297fa4d2cd046eb15cf568659df4ef = $(`<div id="html_b4297fa4d2cd046eb15cf568659df4ef" style="width: 100.0%; height: 100.0%;"><b>Pens</b><br>Akkumulierte Regenmenge: 0.1 mm</div>`)[0];
+                popup_12d0263a77ae3cfa041e5c4f093f6da3.setContent(html_b4297fa4d2cd046eb15cf568659df4ef);
+            
+        
+
+        marker_a55780e443fadfd0de15b1420f0ef302.bindPopup(popup_12d0263a77ae3cfa041e5c4f093f6da3)
+        ;
+
+        
+    
+    
+                marker_a55780e443fadfd0de15b1420f0ef302.setIcon(icon_8450b9becffa1112c44b1a2902f4f7e8);
+            
+    
+            var marker_eb79bde4b84573d4e9ec4e2081f4f7ec = L.marker(
+                [46.8964, 11.4346],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_fa0708db42947efa95d21aac46a7f387 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e92ce72ab012c1a63cc5a3bcfd6ce4e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d9f86879112b2a92bec81130e538afd5 = $(`<div id="html_d9f86879112b2a92bec81130e538afd5" style="width: 100.0%; height: 100.0%;"><b>Sterzing</b><br>Keine Daten</div>`)[0];
+                popup_1e92ce72ab012c1a63cc5a3bcfd6ce4e.setContent(html_d9f86879112b2a92bec81130e538afd5);
+            
+        
+
+        marker_eb79bde4b84573d4e9ec4e2081f4f7ec.bindPopup(popup_1e92ce72ab012c1a63cc5a3bcfd6ce4e)
+        ;
+
+        
+    
+    
+                marker_eb79bde4b84573d4e9ec4e2081f4f7ec.setIcon(icon_fa0708db42947efa95d21aac46a7f387);
+            
+    
+            var marker_1136889220c34e3f0821b25ee4ed6c1b = L.marker(
+                [46.7167, 11.65],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_a7902bedf6dfa4e8af473e0c400960e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5907325109b0c14be71e0cd41acd3d41 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ba7c7acb94fdc7e5c05e4079c91edc39 = $(`<div id="html_ba7c7acb94fdc7e5c05e4079c91edc39" style="width: 100.0%; height: 100.0%;"><b>Brixen</b><br>Akkumulierte Regenmenge: 3.2 mm</div>`)[0];
+                popup_5907325109b0c14be71e0cd41acd3d41.setContent(html_ba7c7acb94fdc7e5c05e4079c91edc39);
+            
+        
+
+        marker_1136889220c34e3f0821b25ee4ed6c1b.bindPopup(popup_5907325109b0c14be71e0cd41acd3d41)
+        ;
+
+        
+    
+    
+                marker_1136889220c34e3f0821b25ee4ed6c1b.setIcon(icon_a7902bedf6dfa4e8af473e0c400960e6);
+            
+    
+            var marker_e6685019cd0c83b9c28045170330ac4a = L.marker(
+                [46.6692, 11.1596],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_1fd8cf74363875dbd647473bdf80bf58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e796b291fc2a17b9e612085a9be67770 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4467c5c394c70e2abe59ff95cd922a44 = $(`<div id="html_4467c5c394c70e2abe59ff95cd922a44" style="width: 100.0%; height: 100.0%;"><b>Meran</b><br>Akkumulierte Regenmenge: 3.6 mm</div>`)[0];
+                popup_e796b291fc2a17b9e612085a9be67770.setContent(html_4467c5c394c70e2abe59ff95cd922a44);
+            
+        
+
+        marker_e6685019cd0c83b9c28045170330ac4a.bindPopup(popup_e796b291fc2a17b9e612085a9be67770)
+        ;
+
+        
+    
+    
+                marker_e6685019cd0c83b9c28045170330ac4a.setIcon(icon_1fd8cf74363875dbd647473bdf80bf58);
+            
+    
+            var marker_045dc49caa284895680a0632c992ba76 = L.marker(
+                [46.5402, 11.462265],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_dad4b2dfedc23ce6156b53e57690017e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1c74e8d3071ff053c8427bb6dfcd6e0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_09aeb330721e4ea328da7288f33573be = $(`<div id="html_09aeb330721e4ea328da7288f33573be" style="width: 100.0%; height: 100.0%;"><b>Klobenstein</b><br>Akkumulierte Regenmenge: 2.9 mm</div>`)[0];
+                popup_f1c74e8d3071ff053c8427bb6dfcd6e0.setContent(html_09aeb330721e4ea328da7288f33573be);
+            
+        
+
+        marker_045dc49caa284895680a0632c992ba76.bindPopup(popup_f1c74e8d3071ff053c8427bb6dfcd6e0)
+        ;
+
+        
+    
+    
+                marker_045dc49caa284895680a0632c992ba76.setIcon(icon_dad4b2dfedc23ce6156b53e57690017e);
+            
+    
+            var marker_d7206c483e7bc929d79e493309f3fc34 = L.marker(
+                [46.6043924, 11.455712],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_2660ee6e21d5cd5ec033b74b76c73107 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffd409223c88fde65cfe605c54404223 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6aca85f1d30c0531a1e326893a6650ee = $(`<div id="html_6aca85f1d30c0531a1e326893a6650ee" style="width: 100.0%; height: 100.0%;"><b>Lagonero</b><br>Akkumulierte Regenmenge: 9.9 mm</div>`)[0];
+                popup_ffd409223c88fde65cfe605c54404223.setContent(html_6aca85f1d30c0531a1e326893a6650ee);
+            
+        
+
+        marker_d7206c483e7bc929d79e493309f3fc34.bindPopup(popup_ffd409223c88fde65cfe605c54404223)
+        ;
+
+        
+    
+    
+                marker_d7206c483e7bc929d79e493309f3fc34.setIcon(icon_2660ee6e21d5cd5ec033b74b76c73107);
+            
+    
+            var marker_1457660c5611aa7af513a09ec4e6b429 = L.marker(
+                [46.7952, 11.8440161],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_b8483520142a0cc51155f1139b2c140a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fea4e5d5cd79e6bc2706bb408acea75a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7df9117e4c18e69f16b1fc5e62ac121f = $(`<div id="html_7df9117e4c18e69f16b1fc5e62ac121f" style="width: 100.0%; height: 100.0%;"><b>Ehrenburg</b><br>Akkumulierte Regenmenge: 0.6 mm</div>`)[0];
+                popup_fea4e5d5cd79e6bc2706bb408acea75a.setContent(html_7df9117e4c18e69f16b1fc5e62ac121f);
+            
+        
+
+        marker_1457660c5611aa7af513a09ec4e6b429.bindPopup(popup_fea4e5d5cd79e6bc2706bb408acea75a)
+        ;
+
+        
+    
+    
+                marker_1457660c5611aa7af513a09ec4e6b429.setIcon(icon_b8483520142a0cc51155f1139b2c140a);
+            
+    
+            var marker_ef75699d13fe1a08d7740ee3fd2ec1d8 = L.marker(
+                [46.590135, 11.526577],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_c5a6cdca263af5ab924139928d154128 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef1d7f48a6d14594ba367436d1f5f566 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_31264cdd71536b22c13dc28571da64e1 = $(`<div id="html_31264cdd71536b22c13dc28571da64e1" style="width: 100.0%; height: 100.0%;"><b>Kollmann</b><br>Akkumulierte Regenmenge: 1.2 mm</div>`)[0];
+                popup_ef1d7f48a6d14594ba367436d1f5f566.setContent(html_31264cdd71536b22c13dc28571da64e1);
+            
+        
+
+        marker_ef75699d13fe1a08d7740ee3fd2ec1d8.bindPopup(popup_ef1d7f48a6d14594ba367436d1f5f566)
+        ;
+
+        
+    
+    
+                marker_ef75699d13fe1a08d7740ee3fd2ec1d8.setIcon(icon_c5a6cdca263af5ab924139928d154128);
+            
+    
+            var marker_a51ff2fd645d9d8ce448bdc682752483 = L.marker(
+                [46.40586, 11.324206],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_f15c4b5d09253682054564755cd26532 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d360ec7f1db28da15bc79c8250cfb363 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d1d4faa7dcf0b0fcd8544b2d0b40254f = $(`<div id="html_d1d4faa7dcf0b0fcd8544b2d0b40254f" style="width: 100.0%; height: 100.0%;"><b>Branzoll</b><br>Akkumulierte Regenmenge: 3.9 mm</div>`)[0];
+                popup_d360ec7f1db28da15bc79c8250cfb363.setContent(html_d1d4faa7dcf0b0fcd8544b2d0b40254f);
+            
+        
+
+        marker_a51ff2fd645d9d8ce448bdc682752483.bindPopup(popup_d360ec7f1db28da15bc79c8250cfb363)
+        ;
+
+        
+    
+    
+                marker_a51ff2fd645d9d8ce448bdc682752483.setIcon(icon_f15c4b5d09253682054564755cd26532);
+            
+    
+            var marker_ce217b142eb742476570f54d04baf866 = L.marker(
+                [46.4996863, 11.4359961],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_e4971098e725b175424a25aa438c32e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1cdc5948f83aa46a13dfaef759e735ab = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9750f7d364c674214f8aebda7362e508 = $(`<div id="html_9750f7d364c674214f8aebda7362e508" style="width: 100.0%; height: 100.0%;"><b>Dornacherhof</b><br>Akkumulierte Regenmenge: 3.4 mm</div>`)[0];
+                popup_1cdc5948f83aa46a13dfaef759e735ab.setContent(html_9750f7d364c674214f8aebda7362e508);
+            
+        
+
+        marker_ce217b142eb742476570f54d04baf866.bindPopup(popup_1cdc5948f83aa46a13dfaef759e735ab)
+        ;
+
+        
+    
+    
+                marker_ce217b142eb742476570f54d04baf866.setIcon(icon_e4971098e725b175424a25aa438c32e7);
+            
+    
+            var marker_09f3a20187fcf2326556a793452ba7b1 = L.marker(
+                [46.642756, 11.360727],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_21ff7d8706048beccd6176affeec636b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8d83884ede997f9e8f19b57481901c1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_482c013977a1b77363a6dd2c226968cc = $(`<div id="html_482c013977a1b77363a6dd2c226968cc" style="width: 100.0%; height: 100.0%;"><b>Sarnthein</b><br>Akkumulierte Regenmenge: 6.1 mm</div>`)[0];
+                popup_d8d83884ede997f9e8f19b57481901c1.setContent(html_482c013977a1b77363a6dd2c226968cc);
+            
+        
+
+        marker_09f3a20187fcf2326556a793452ba7b1.bindPopup(popup_d8d83884ede997f9e8f19b57481901c1)
+        ;
+
+        
+    
+    
+                marker_09f3a20187fcf2326556a793452ba7b1.setIcon(icon_21ff7d8706048beccd6176affeec636b);
+            
+    
+            var marker_20d2181c144d5ec7282eff7973b3247a = L.marker(
+                [46.780796, 11.22253],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_0b5af7be234dc97fe59bbb839ca20b86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0fff46f9a8dad090e6166a9f9c5bcc66 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a70e5c53018cf7566438bc9a58561891 = $(`<div id="html_a70e5c53018cf7566438bc9a58561891" style="width: 100.0%; height: 100.0%;"><b>St.martin</b><br>Keine Daten</div>`)[0];
+                popup_0fff46f9a8dad090e6166a9f9c5bcc66.setContent(html_a70e5c53018cf7566438bc9a58561891);
+            
+        
+
+        marker_20d2181c144d5ec7282eff7973b3247a.bindPopup(popup_0fff46f9a8dad090e6166a9f9c5bcc66)
+        ;
+
+        
+    
+    
+                marker_20d2181c144d5ec7282eff7973b3247a.setIcon(icon_0b5af7be234dc97fe59bbb839ca20b86);
+            
+    
+            var marker_f39514d31b90b24eb005f2eead3a22a2 = L.marker(
+                [46.6437478, 10.99947],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_5bf52a00027bf85c1dbbf084f6a621c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf7e200b24159c9914991771b6d24f57 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_84526a3ad68a39f2ef145318e3698864 = $(`<div id="html_84526a3ad68a39f2ef145318e3698864" style="width: 100.0%; height: 100.0%;"><b>Naturns</b><br>Keine Daten</div>`)[0];
+                popup_cf7e200b24159c9914991771b6d24f57.setContent(html_84526a3ad68a39f2ef145318e3698864);
+            
+        
+
+        marker_f39514d31b90b24eb005f2eead3a22a2.bindPopup(popup_cf7e200b24159c9914991771b6d24f57)
+        ;
+
+        
+    
+    
+                marker_f39514d31b90b24eb005f2eead3a22a2.setIcon(icon_5bf52a00027bf85c1dbbf084f6a621c9);
+            
+    
+            var marker_611445d5cc156e14c255ad6316f7dd42 = L.marker(
+                [46.5964, 11.1929],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_58254f1210553b0effc55a0df18b5b08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1880aa04a7c1fa4637d9c4b4685bea95 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9e0e7e47994a1e885bce527c1d5688a7 = $(`<div id="html_9e0e7e47994a1e885bce527c1d5688a7" style="width: 100.0%; height: 100.0%;"><b>Gargazon</b><br>Akkumulierte Regenmenge: 1.7 mm</div>`)[0];
+                popup_1880aa04a7c1fa4637d9c4b4685bea95.setContent(html_9e0e7e47994a1e885bce527c1d5688a7);
+            
+        
+
+        marker_611445d5cc156e14c255ad6316f7dd42.bindPopup(popup_1880aa04a7c1fa4637d9c4b4685bea95)
+        ;
+
+        
+    
+    
+                marker_611445d5cc156e14c255ad6316f7dd42.setIcon(icon_58254f1210553b0effc55a0df18b5b08);
+            
+    
+            var marker_e0dca82e0cc0ab7e8c782870ddaa6a6e = L.marker(
+                [46.8061453, 11.576706],
+                {
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+        
+    
+            var icon_aac25b2acd280a83f24c9e46b834c4af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea0a0582971687a9fe994b956494f151 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_402e5c0eb4cde6353b472361b10298fe = $(`<div id="html_402e5c0eb4cde6353b472361b10298fe" style="width: 100.0%; height: 100.0%;"><b>Mittewald</b><br>Akkumulierte Regenmenge: 2.9 mm</div>`)[0];
+                popup_ea0a0582971687a9fe994b956494f151.setContent(html_402e5c0eb4cde6353b472361b10298fe);
+            
+        
+
+        marker_e0dca82e0cc0ab7e8c782870ddaa6a6e.bindPopup(popup_ea0a0582971687a9fe994b956494f151)
+        ;
+
+        
+    
+    
+                marker_e0dca82e0cc0ab7e8c782870ddaa6a6e.setIcon(icon_aac25b2acd280a83f24c9e46b834c4af);
+            
+    
+            var layer_control_255a989c5c7eb2ffedafcef3b36c74a3_layers = {
+                base_layers : {
+                    "Esri Satellite" : tile_layer_54dbdf109ddab06fd66a54212cdadd58,
+                },
+                overlays :  {
+                    "Labels" : tile_layer_fc8ac1a104b6b513275c92e9cec1c7bd,
+                },
+            };
+            let layer_control_255a989c5c7eb2ffedafcef3b36c74a3 = L.control.layers(
+                layer_control_255a989c5c7eb2ffedafcef3b36c74a3_layers.base_layers,
+                layer_control_255a989c5c7eb2ffedafcef3b36c74a3_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_da63aa9fe0f21b8e6acc0fbc8c82be9d);
+
+        
+</script>
+</html>
