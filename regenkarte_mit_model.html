@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e47985d837557ca2ad3a66204ced8ac5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e47985d837557ca2ad3a66204ced8ac5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e47985d837557ca2ad3a66204ced8ac5 = L.map(
+                "map_e47985d837557ca2ad3a66204ced8ac5",
+                {
+                    center: [46.5, 11.4],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_05a9df6c1305c89c351b39280fd70cc5 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_05a9df6c1305c89c351b39280fd70cc5.addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var tile_layer_a8be78f7f4ca7f43b2ffb3f936f08224 = L.tileLayer(
+                "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri Boundaries",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a8be78f7f4ca7f43b2ffb3f936f08224.addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var marker_d23284483d3576594882bbc509e2a213 = L.marker(
+                [46.4981, 11.3548],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_5d6be7adc89db49bd4fbd95418d818e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_587d25380b79cc26429cec7f781ade4e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9231a4eb4461d7815ff01df3c1cee53a = $(`<div id="html_9231a4eb4461d7815ff01df3c1cee53a" style="width: 100.0%; height: 100.0%;"><b>Bozen</b><br>Gemessen: 0.000 mm<br>Modell: 0.149 mm<br><b>Diff (Modell – Messung): +0.149 mm</b></div>`)[0];
+                popup_587d25380b79cc26429cec7f781ade4e.setContent(html_9231a4eb4461d7815ff01df3c1cee53a);
+            
+        
+
+        marker_d23284483d3576594882bbc509e2a213.bindPopup(popup_587d25380b79cc26429cec7f781ade4e)
+        ;
+
+        
+    
+    
+                marker_d23284483d3576594882bbc509e2a213.setIcon(icon_5d6be7adc89db49bd4fbd95418d818e8);
+            
+    
+            var marker_550c4152292d5b6568bb5b64a2585296 = L.marker(
+                [46.7796, 11.41446],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_b13c39413dd24edc9dd1fcc9e649a169 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad5bd221735785938274d81495fc9e10 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d470d20af62bb02854a2f92f87bb6e9f = $(`<div id="html_d470d20af62bb02854a2f92f87bb6e9f" style="width: 100.0%; height: 100.0%;"><b>Pens</b><br>Gemessen: 0.650 mm<br>Modell: 0.312 mm<br><b>Diff (Modell – Messung): -0.338 mm</b></div>`)[0];
+                popup_ad5bd221735785938274d81495fc9e10.setContent(html_d470d20af62bb02854a2f92f87bb6e9f);
+            
+        
+
+        marker_550c4152292d5b6568bb5b64a2585296.bindPopup(popup_ad5bd221735785938274d81495fc9e10)
+        ;
+
+        
+    
+    
+                marker_550c4152292d5b6568bb5b64a2585296.setIcon(icon_b13c39413dd24edc9dd1fcc9e649a169);
+            
+    
+            var marker_7af9fd25a9627223260062fe56ee9f81 = L.marker(
+                [46.8964, 11.4346],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_2ac9e4da4e6e458e3513ee0054807942 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a3fac3570f2c4464a3dfa4ace4c78f6e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7b40d302ead2ee591a44b935e1032f31 = $(`<div id="html_7b40d302ead2ee591a44b935e1032f31" style="width: 100.0%; height: 100.0%;"><b>Sterzing</b><br>Modell: 0.000 mm<br></div>`)[0];
+                popup_a3fac3570f2c4464a3dfa4ace4c78f6e.setContent(html_7b40d302ead2ee591a44b935e1032f31);
+            
+        
+
+        marker_7af9fd25a9627223260062fe56ee9f81.bindPopup(popup_a3fac3570f2c4464a3dfa4ace4c78f6e)
+        ;
+
+        
+    
+    
+                marker_7af9fd25a9627223260062fe56ee9f81.setIcon(icon_2ac9e4da4e6e458e3513ee0054807942);
+            
+    
+            var marker_a01e6a5718f4e907b295023203089ed7 = L.marker(
+                [46.7167, 11.65],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_1a95fa9c4fafe098faf41d2fc455ef04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_15fe733cdfd2ab2bb680e939dae00252 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d7e92a8c11045bb43369ed97301b4d6a = $(`<div id="html_d7e92a8c11045bb43369ed97301b4d6a" style="width: 100.0%; height: 100.0%;"><b>Brixen</b><br>Gemessen: 0.000 mm<br>Modell: 0.375 mm<br><b>Diff (Modell – Messung): +0.375 mm</b></div>`)[0];
+                popup_15fe733cdfd2ab2bb680e939dae00252.setContent(html_d7e92a8c11045bb43369ed97301b4d6a);
+            
+        
+
+        marker_a01e6a5718f4e907b295023203089ed7.bindPopup(popup_15fe733cdfd2ab2bb680e939dae00252)
+        ;
+
+        
+    
+    
+                marker_a01e6a5718f4e907b295023203089ed7.setIcon(icon_1a95fa9c4fafe098faf41d2fc455ef04);
+            
+    
+            var marker_120feb160f4ca3cd829737b5b99739e9 = L.marker(
+                [46.6692, 11.1596],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_2b13ea05ae2f145906820a2a1ab582e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_680cc4090d649244399338b4f7e03c9d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_34e6d58c2cd93e600864247d645b4261 = $(`<div id="html_34e6d58c2cd93e600864247d645b4261" style="width: 100.0%; height: 100.0%;"><b>Meran</b><br>Gemessen: 0.000 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): +0.000 mm</b></div>`)[0];
+                popup_680cc4090d649244399338b4f7e03c9d.setContent(html_34e6d58c2cd93e600864247d645b4261);
+            
+        
+
+        marker_120feb160f4ca3cd829737b5b99739e9.bindPopup(popup_680cc4090d649244399338b4f7e03c9d)
+        ;
+
+        
+    
+    
+                marker_120feb160f4ca3cd829737b5b99739e9.setIcon(icon_2b13ea05ae2f145906820a2a1ab582e3);
+            
+    
+            var marker_10ad7642c17a28de59d4c26573bd0405 = L.marker(
+                [46.5402, 11.462265],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_ececb9e1c035fcb1c290b1aff5fd1cc3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b577269944f8d08e9b9d24c5eb7d6db4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_91ca2b35ba08769a1e832ddf72156f1a = $(`<div id="html_91ca2b35ba08769a1e832ddf72156f1a" style="width: 100.0%; height: 100.0%;"><b>Klobenstein</b><br>Gemessen: 9.950 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): -9.950 mm</b></div>`)[0];
+                popup_b577269944f8d08e9b9d24c5eb7d6db4.setContent(html_91ca2b35ba08769a1e832ddf72156f1a);
+            
+        
+
+        marker_10ad7642c17a28de59d4c26573bd0405.bindPopup(popup_b577269944f8d08e9b9d24c5eb7d6db4)
+        ;
+
+        
+    
+    
+                marker_10ad7642c17a28de59d4c26573bd0405.setIcon(icon_ececb9e1c035fcb1c290b1aff5fd1cc3);
+            
+    
+            var marker_9b27a284aadfce00f621a80c1c8af6bd = L.marker(
+                [46.6043924, 11.455712],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_e32cdd7e7b0a8bff194c418f2b430a7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db2c49b386d9ea7a05cbfb4ae06628f3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2f8168a24eb1fd3ed5bd9c9ee74d8fdd = $(`<div id="html_2f8168a24eb1fd3ed5bd9c9ee74d8fdd" style="width: 100.0%; height: 100.0%;"><b>Lagonero</b><br>Gemessen: 4.820 mm<br>Modell: 0.002 mm<br><b>Diff (Modell – Messung): -4.818 mm</b></div>`)[0];
+                popup_db2c49b386d9ea7a05cbfb4ae06628f3.setContent(html_2f8168a24eb1fd3ed5bd9c9ee74d8fdd);
+            
+        
+
+        marker_9b27a284aadfce00f621a80c1c8af6bd.bindPopup(popup_db2c49b386d9ea7a05cbfb4ae06628f3)
+        ;
+
+        
+    
+    
+                marker_9b27a284aadfce00f621a80c1c8af6bd.setIcon(icon_e32cdd7e7b0a8bff194c418f2b430a7e);
+            
+    
+            var marker_ce6a2b6bd01a42b7ed93ff9d15765798 = L.marker(
+                [46.7952, 11.8440161],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_2101958b593a1aa6375a6416bd400866 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9df4558091bb4436b737424de7c591e5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2e20c5e9de9ece0d8fbb0aafe924d1cb = $(`<div id="html_2e20c5e9de9ece0d8fbb0aafe924d1cb" style="width: 100.0%; height: 100.0%;"><b>Ehrenburg</b><br>Modell: 0.000 mm<br></div>`)[0];
+                popup_9df4558091bb4436b737424de7c591e5.setContent(html_2e20c5e9de9ece0d8fbb0aafe924d1cb);
+            
+        
+
+        marker_ce6a2b6bd01a42b7ed93ff9d15765798.bindPopup(popup_9df4558091bb4436b737424de7c591e5)
+        ;
+
+        
+    
+    
+                marker_ce6a2b6bd01a42b7ed93ff9d15765798.setIcon(icon_2101958b593a1aa6375a6416bd400866);
+            
+    
+            var marker_840bd36c93f2b072c0af7d9e24f86f5b = L.marker(
+                [46.590135, 11.526577],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_ff1e416b0892f9b2b7d560ba679c0bf0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16e278cfd57bc42bc9c6622a879eb99b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_85ef63390fcd6e31f2eff60e2ec178d6 = $(`<div id="html_85ef63390fcd6e31f2eff60e2ec178d6" style="width: 100.0%; height: 100.0%;"><b>Kollmann</b><br>Gemessen: 0.010 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): -0.010 mm</b></div>`)[0];
+                popup_16e278cfd57bc42bc9c6622a879eb99b.setContent(html_85ef63390fcd6e31f2eff60e2ec178d6);
+            
+        
+
+        marker_840bd36c93f2b072c0af7d9e24f86f5b.bindPopup(popup_16e278cfd57bc42bc9c6622a879eb99b)
+        ;
+
+        
+    
+    
+                marker_840bd36c93f2b072c0af7d9e24f86f5b.setIcon(icon_ff1e416b0892f9b2b7d560ba679c0bf0);
+            
+    
+            var marker_675073af3978cf9d1d152618014c1e42 = L.marker(
+                [46.40586, 11.324206],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_52d2f2c70106f756b8cdc5009b142781 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba4cc7610db45682d231971d5cabed9e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1c2ed138dea9680c741537950d1f3439 = $(`<div id="html_1c2ed138dea9680c741537950d1f3439" style="width: 100.0%; height: 100.0%;"><b>Branzoll</b><br>Gemessen: 0.000 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): +0.000 mm</b></div>`)[0];
+                popup_ba4cc7610db45682d231971d5cabed9e.setContent(html_1c2ed138dea9680c741537950d1f3439);
+            
+        
+
+        marker_675073af3978cf9d1d152618014c1e42.bindPopup(popup_ba4cc7610db45682d231971d5cabed9e)
+        ;
+
+        
+    
+    
+                marker_675073af3978cf9d1d152618014c1e42.setIcon(icon_52d2f2c70106f756b8cdc5009b142781);
+            
+    
+            var marker_0e52aed7272e78e383c3f7cc8d627974 = L.marker(
+                [46.4996863, 11.4359961],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_002e56078ec10be7ad1766d0221ef84c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d487e6798564b9706254311730a8a0f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6d36a428e6961e8077e03bba4aa9f3b2 = $(`<div id="html_6d36a428e6961e8077e03bba4aa9f3b2" style="width: 100.0%; height: 100.0%;"><b>Dornacherhof</b><br>Gemessen: 4.970 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): -4.970 mm</b></div>`)[0];
+                popup_4d487e6798564b9706254311730a8a0f.setContent(html_6d36a428e6961e8077e03bba4aa9f3b2);
+            
+        
+
+        marker_0e52aed7272e78e383c3f7cc8d627974.bindPopup(popup_4d487e6798564b9706254311730a8a0f)
+        ;
+
+        
+    
+    
+                marker_0e52aed7272e78e383c3f7cc8d627974.setIcon(icon_002e56078ec10be7ad1766d0221ef84c);
+            
+    
+            var marker_4f4eadb9477e984250774cdb7da1066d = L.marker(
+                [46.642756, 11.360727],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_a2594c94be5b412951f23bb43d38672c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a822a174530eb359d0908ab936ce07c0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e339ae293260b8e82ab388b2504ed34c = $(`<div id="html_e339ae293260b8e82ab388b2504ed34c" style="width: 100.0%; height: 100.0%;"><b>Sarnthein</b><br>Gemessen: 2.160 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): -2.160 mm</b></div>`)[0];
+                popup_a822a174530eb359d0908ab936ce07c0.setContent(html_e339ae293260b8e82ab388b2504ed34c);
+            
+        
+
+        marker_4f4eadb9477e984250774cdb7da1066d.bindPopup(popup_a822a174530eb359d0908ab936ce07c0)
+        ;
+
+        
+    
+    
+                marker_4f4eadb9477e984250774cdb7da1066d.setIcon(icon_a2594c94be5b412951f23bb43d38672c);
+            
+    
+            var marker_d321964c3d64cbdc7071d69539ec3a46 = L.marker(
+                [46.780796, 11.22253],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_e25d31bd695604c62eb09eb8f46ae70e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c895c6f268cf87535df98092cbd1b8d5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0c0be668dccd030650d1d25f3e45ea54 = $(`<div id="html_0c0be668dccd030650d1d25f3e45ea54" style="width: 100.0%; height: 100.0%;"><b>St.martin</b><br>Modell: 0.000 mm<br></div>`)[0];
+                popup_c895c6f268cf87535df98092cbd1b8d5.setContent(html_0c0be668dccd030650d1d25f3e45ea54);
+            
+        
+
+        marker_d321964c3d64cbdc7071d69539ec3a46.bindPopup(popup_c895c6f268cf87535df98092cbd1b8d5)
+        ;
+
+        
+    
+    
+                marker_d321964c3d64cbdc7071d69539ec3a46.setIcon(icon_e25d31bd695604c62eb09eb8f46ae70e);
+            
+    
+            var marker_86423b271e583c5b7e9c59da609aeaa6 = L.marker(
+                [46.6437478, 10.99947],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_51a549f57f2bce58c755980f8eb3eb90 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3ea638afb3e187acf9e79a83693f70c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1c8a03b6bb140b4a153d36c462e87dc4 = $(`<div id="html_1c8a03b6bb140b4a153d36c462e87dc4" style="width: 100.0%; height: 100.0%;"><b>Naturns</b><br>Gemessen: 4.300 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): -4.300 mm</b></div>`)[0];
+                popup_d3ea638afb3e187acf9e79a83693f70c.setContent(html_1c8a03b6bb140b4a153d36c462e87dc4);
+            
+        
+
+        marker_86423b271e583c5b7e9c59da609aeaa6.bindPopup(popup_d3ea638afb3e187acf9e79a83693f70c)
+        ;
+
+        
+    
+    
+                marker_86423b271e583c5b7e9c59da609aeaa6.setIcon(icon_51a549f57f2bce58c755980f8eb3eb90);
+            
+    
+            var marker_97845f2dec4a0a9c488c7745a6cac294 = L.marker(
+                [46.5964, 11.1929],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_50799c727be6bdbd1233b852d53aa44d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11100287a592100fb880cc7c7cc17921 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dfe982cc96591acaf2c975282860cc01 = $(`<div id="html_dfe982cc96591acaf2c975282860cc01" style="width: 100.0%; height: 100.0%;"><b>Gargazon</b><br>Gemessen: 0.030 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): -0.030 mm</b></div>`)[0];
+                popup_11100287a592100fb880cc7c7cc17921.setContent(html_dfe982cc96591acaf2c975282860cc01);
+            
+        
+
+        marker_97845f2dec4a0a9c488c7745a6cac294.bindPopup(popup_11100287a592100fb880cc7c7cc17921)
+        ;
+
+        
+    
+    
+                marker_97845f2dec4a0a9c488c7745a6cac294.setIcon(icon_50799c727be6bdbd1233b852d53aa44d);
+            
+    
+            var marker_f0ab463cc92e8a6499014a22d63c7022 = L.marker(
+                [46.8061453, 11.576706],
+                {
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+        
+    
+            var icon_2464c2c57b6188c0fac1c3ea869482f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud-rain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f4a3def02dafba2879f783e432d7694a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fd983fa83c18ef5acc802c3d2fe32371 = $(`<div id="html_fd983fa83c18ef5acc802c3d2fe32371" style="width: 100.0%; height: 100.0%;"><b>Mittewald</b><br>Gemessen: 0.150 mm<br>Modell: 0.000 mm<br><b>Diff (Modell – Messung): -0.150 mm</b></div>`)[0];
+                popup_f4a3def02dafba2879f783e432d7694a.setContent(html_fd983fa83c18ef5acc802c3d2fe32371);
+            
+        
+
+        marker_f0ab463cc92e8a6499014a22d63c7022.bindPopup(popup_f4a3def02dafba2879f783e432d7694a)
+        ;
+
+        
+    
+    
+                marker_f0ab463cc92e8a6499014a22d63c7022.setIcon(icon_2464c2c57b6188c0fac1c3ea869482f8);
+            
+    
+            var layer_control_5de7b5e34dd801fa37975e7c63b02870_layers = {
+                base_layers : {
+                    "Esri Satellite" : tile_layer_05a9df6c1305c89c351b39280fd70cc5,
+                },
+                overlays :  {
+                    "Labels" : tile_layer_a8be78f7f4ca7f43b2ffb3f936f08224,
+                },
+            };
+            let layer_control_5de7b5e34dd801fa37975e7c63b02870 = L.control.layers(
+                layer_control_5de7b5e34dd801fa37975e7c63b02870_layers.base_layers,
+                layer_control_5de7b5e34dd801fa37975e7c63b02870_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_e47985d837557ca2ad3a66204ced8ac5);
+
+        
+</script>
+</html>
